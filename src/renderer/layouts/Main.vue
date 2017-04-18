@@ -20,7 +20,9 @@
     }
   }
 </script>
-
+<style>
+    @import '../styles/style.css';
+</style>
 <style scoped>
   .container {
     max-width: 600px;

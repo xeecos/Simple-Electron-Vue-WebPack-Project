@@ -7,5 +7,6 @@ app.on("ready", function() {
         width: 800,
         height: 600
     });
+    mainWindow.openDevTools();
     mainWindow.loadURL(`${ROOT_PATH}/dist/client/html/index.html`);
 });

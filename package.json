@@ -12,7 +12,9 @@
         "url": "https://github.com/xeecos/Simple-Electron-Vue-WebPack-Project"
     },
     "keywords": [
-        "electron", "vue", "webpack"
+        "electron",
+        "vue",
+        "webpack"
     ],
     "author": "xeecos",
     "license": "MIT",

@@ -26,6 +26,13 @@ module.exports = [{
                 }
             },
             {
+                test: /\.(css|sass)$/,
+                loader: 'sass-loader',
+                query: {
+                    name: '[name].[ext]?[hash]'
+                }
+            },
+            {
                 test: /\.(htm|html)$/,
                 loader: 'html-loader',
                 query: {
