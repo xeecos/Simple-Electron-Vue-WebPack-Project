@@ -3,7 +3,8 @@
  - ```npm run watch```
  - ```npm start```
 
-```src
+```
+src
 |
 |----app
 |     |
