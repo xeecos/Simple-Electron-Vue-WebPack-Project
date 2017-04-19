@@ -9,8 +9,3 @@ const app = new Vue({
     router,
     template: `<div id="app"><router-view class="view"></router-view></div>`
 }).$mount('#app');
-router.push({ path: "/" })
-
-window.addEventListener('popstate', () => {
-    app.currentRoute = window.location.pathname;
-})

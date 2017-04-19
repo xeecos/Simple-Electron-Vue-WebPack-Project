@@ -12381,11 +12381,6 @@ var app = new _vue2.default({
     router: router,
     template: '<div id="app"><router-view class="view"></router-view></div>'
 }).$mount('#app');
-router.push({ path: "/" });
-
-window.addEventListener('popstate', function () {
-    app.currentRoute = window.location.pathname;
-});
 
 /***/ }),
 /* 14 */
