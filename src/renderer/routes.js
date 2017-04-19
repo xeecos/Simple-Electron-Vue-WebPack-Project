@@ -1,6 +1,4 @@
-export default [
-    // 动态路径参数 以冒号开头
-    {
+export default [{
         path: '/',
         component: require('./home/home.vue')
     },
@@ -11,5 +9,9 @@ export default [
     {
         path: '/user/:id',
         component: require('./user/user.vue')
+    },
+    {
+        path: '*',
+        component: require('./error/error.vue')
     }
 ]
