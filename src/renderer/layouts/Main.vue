@@ -2,8 +2,9 @@
   <div class="container">
     <ul>
       <li>
-        <v-link href="/">Home</v-link>
-        <v-link href="/editor">Editor</v-link>
+        <router-link to="/">Home</router-link>
+        <router-link to="/editor">Editor</router-link>
+        <router-link to="/user/1">User</router-link>
       </li>
     </ul>
 
@@ -11,15 +12,6 @@
   </div>
 </template>
 
-<script>
-  import VLink from '../components/link.vue'
-
-  export default {
-    components: {
-      VLink
-    }
-  }
-</script>
 <style>
     @import '../styles/style.css';
 </style>

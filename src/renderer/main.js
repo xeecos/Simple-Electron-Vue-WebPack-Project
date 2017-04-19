@@ -1,25 +1,16 @@
-import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Vue from 'vue/dist/vue.js'
 import routes from './routes'
-
-const app = new Vue({
-    el: '#app',
-    data: {
-        currentRoute: "/"
-    },
-    computed: {
-        ViewComponent() {
-            const matchingView = routes[this.currentRoute];
-            console.log(this.currentRoute)
-            return matchingView ?
-                require('./' + matchingView.toString().toLowerCase() + '/' + matchingView.toString().toLowerCase() + '.vue') :
-                require('./excepts/error.vue')
-        }
-    },
-    render(h) {
-        return h(this.ViewComponent)
-    }
+Vue.use(VueRouter)
+const router = new VueRouter({
+    routes: routes
 })
+const app = new Vue({
+    router,
+    template: `<div id="app"><router-view class="view"></router-view></div>`
+}).$mount('#app');
+router.push({ path: "/" })
 
 window.addEventListener('popstate', () => {
-    app.currentRoute = window.location.pathname
+    app.currentRoute = window.location.pathname;
 })
