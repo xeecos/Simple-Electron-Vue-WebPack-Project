@@ -2,7 +2,8 @@
  - ```npm install```
  - ```npm run watch```
  - ```npm start```
-src
+
+```src
 |
 |----app
 |     |
@@ -41,4 +42,4 @@ src
 |       |-----styles
 |               |
 |               |------style.css(main style)
- 
+ ```
