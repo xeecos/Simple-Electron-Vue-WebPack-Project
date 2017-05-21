@@ -59,5 +59,10 @@ module.exports = [{
         publicPath: '/dist/',
         filename: 'app.js'
     },
-    target: 'electron'
+    target: 'electron',
+    plugins: [
+        new webpack.DefinePlugin({
+            $dirname: '__dirname',
+        }),
+    ]
 }]
