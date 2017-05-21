@@ -1,13 +1,15 @@
 import { app, BrowserWindow } from "electron";
 import path from "path";
 
-const ROOT_PATH = "file://" + path.resolve("");
+const ROOT_PATH = "file://" + path.join($dirname, "/../");
 app.on("ready", function() {
     var mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: 1280,
+        height: 800
     });
-    BrowserWindow.addDevToolsExtension(`../../../AppData/Local/Google/Chrome/User Data/Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd/3.1.2_0`);
+    if (process.platform == 'darwin') {
+        BrowserWindow.addDevToolsExtension(`~/Library/Application Support/Google/Chrome/Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd/3.1.2_0`);
+    }
     mainWindow.openDevTools();
-    mainWindow.loadURL(`${ROOT_PATH}/dist/client/html/index.html`);
+    mainWindow.loadURL(`${ROOT_PATH}/client/html/index.html`);
 });
