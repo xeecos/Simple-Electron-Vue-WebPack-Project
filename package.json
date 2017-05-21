@@ -5,7 +5,8 @@
   "main": "dist/app/app.js",
   "scripts": {
     "start": "electron .",
-    "watch": "webpack --progress --colors --watch"
+    "watch": "webpack --progress --colors --watch",
+    "packager": "webpack&electron-packager . --platform=win32 --arch=x64 --asar --overwrite --out=releases --ignore=src"
   },
   "repository": {
     "type": "git",
